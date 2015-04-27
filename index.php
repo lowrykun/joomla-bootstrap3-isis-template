@@ -317,7 +317,7 @@ $stickyToolbar = $this->params->get('stickyToolbar', '1');
         			switch (String.fromCharCode(event.which).toLowerCase()) {
         				case 's':
             				event.preventDefault();
-            				var SaveForm = jQuery("button.btn.btn-small.btn-success").attr("onclick");
+            				var SaveForm = jQuery("#toolbar-apply button").attr("onclick");
             				eval(SaveForm);
             				break;
         			}
