@@ -312,6 +312,17 @@ $stickyToolbar = $this->params->get('stickyToolbar', '1');
 				}
 			}
 		});
+		jQuery(window).bind('keydown', function(event) {
+    			if (event.ctrlKey || event.metaKey) {
+        			switch (String.fromCharCode(event.which).toLowerCase()) {
+        				case 's':
+            				event.preventDefault();
+            				var SaveForm = jQuery("button.btn.btn-small.btn-success").attr("onclick");
+            				eval(SaveForm);
+            				break;
+        			}
+    			}
+		});
 	</script>
 <?php endif; ?>
 </body>
